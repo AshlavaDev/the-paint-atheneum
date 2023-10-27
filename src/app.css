@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Forum";
-  src: url("/assets/fonts/Forum-Regular.ttf");
+	font-family: 'Forum';
+	src: url('/assets/fonts/Forum-Regular.ttf');
 }
 
 @font-face {
-  font-family: "Noto-Sans-Japanese";
-  src: url("/assets/fonts/NotoSansJP-Regular.otf");
+	font-family: 'Noto-Sans-Japanese';
+	src: url('/assets/fonts/NotoSansJP-Regular.otf');
 }
 
 @font-face {
-  font-family: "Playfair-Display";
-  src: url("/assets/fonts/PlayfairDisplaySC-Regular.ttf")
+	font-family: 'Playfair-Display';
+	src: url('/assets/fonts/PlayfairDisplaySC-Regular.ttf');
 }
