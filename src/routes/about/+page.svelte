@@ -1,3 +1,18 @@
+<script lang="ts">
+	import { headingData } from "$lib/store";
+	import { onMount } from "svelte";
+
+	const headingInfo = {
+		heading: "About",
+		subHeading: "The Mission of The Paint Atheneum",
+	}
+
+	onMount(() => {
+		headingData.set(headingInfo);
+	})
+
+</script>
+
 <section class="flex-grow flex flex-col items-center gap-4 py-6 px-8">
 	<div class="max-w-prose flex flex-col gap-3">
 		<h4 class="font-serif text-2xl md:text-4xl text-darkblue py-2 text-center">

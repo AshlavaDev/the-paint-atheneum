@@ -1,3 +1,7 @@
+<script>
+	//TODO: Remake mobile navigation
+</script>
+
 <header
 	class="flex items-center justify-around py-8 px-4 text-darkblue border-b-4 border-darkblue font-serif"
 >
@@ -18,13 +22,13 @@
 			</a>
 			<a
 				class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1"
-				href="/paintcolour"
+				href="/paintcolours"
 			>
 				Colours
 			</a>
 			<a
 				class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1"
-				href="/painttype"
+				href="/painttypes"
 			>
 				Types
 			</a>

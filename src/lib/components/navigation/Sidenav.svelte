@@ -1,3 +1,7 @@
+<script>
+	//FIXME: Paint dropdown section styles + add down arrow icon
+</script>
+
 <div class="max-w-1/5 h-screen sticky top-0 border-r-4 border-darkblue hidden md:block">
 	<div class="px-2 py-6 flex flex-col justify-between text-darkblue font-sans">
 		<span class="block w-32 h-10 rounded-lg" />
@@ -20,12 +24,12 @@
 						>
 					</li>
 					<li>
-						<a href="/paintcolour" class="text-sm hover:bg-darkblue hover:text-offwhite"
+						<a href="/paintcolours" class="text-sm hover:bg-darkblue hover:text-offwhite"
 							>By Colour</a
 						>
 					</li>
 					<li>
-						<a href="/painttype" class="text-sm hover:bg-darkblue hover:text-offwhite">By Type</a>
+						<a href="/painttypes" class="text-sm hover:bg-darkblue hover:text-offwhite">By Type</a>
 					</li>
 				</ul>
 			</details>

@@ -8,7 +8,7 @@
         A Library of Paints for Miniatures
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="/paintcolour" class="block w-full rounded border border-darkblue bg-darkblue px-12 py-3 font-sans text-offwhite hover:bg-transparent hover:text-darkblue focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
+        <a href="/paintcolours" class="block w-full rounded border border-darkblue bg-darkblue px-12 py-3 font-sans text-offwhite hover:bg-transparent hover:text-darkblue focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
           Find Colours
         </a>
 

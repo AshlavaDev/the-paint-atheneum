@@ -1,10 +1,9 @@
 <script  lang="ts">
-	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 
 	import Footer from '$lib/components/navigation/Footer.svelte';
-	import Sidenav from '$lib/components/navigation/Sidenav.svelte';
-	import Topnav from '$lib/components/navigation/Topnav.svelte';
+	import SideNav from '$lib/components/navigation/SideNav.svelte';
+	import TopNav from '$lib/components/navigation/TopNav.svelte';
 	import HomeHeading from '$lib/components/pageheadings/HomeHeading.svelte';
 	import OtherHeading from '$lib/components/pageheadings/OtherHeading.svelte';
 	import '../app.css';
@@ -22,15 +21,14 @@
 		}
 	}
 
-
 </script>
 
 <div class="bg-offwhite">
-	<Topnav />
+	<TopNav />
 	<main class="min-h-screen">
 		<svelte:component this={pageHeading} />
 		<div class="flex justify-between">
-			<Sidenav />
+			<SideNav />
 			<slot />
 		</div>
 	</main>
