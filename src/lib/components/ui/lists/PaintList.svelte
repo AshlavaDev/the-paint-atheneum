@@ -1,11 +1,16 @@
 <script lang="ts">
   // A ui component for list rendering
+
   import type { PaintProps } from 'AntheneumTypes';
 	import PaintCard from "../cards/PaintCard.svelte";
 
   //The paint array that is all paints of that brand and range, is Svelte store set with radio buttons
   export let paints: Array<PaintProps>;
 
+  //Optional parameters for filtering
+  export let isPaintTypePage: boolean = false;
+  export let isCompanyPage: boolean = false;
+  
   //Pagination variables for max items on a page and the current page starting at one
   export let itemsPerPage: number = 15;
   export let currentPage: number = 1;
@@ -49,6 +54,12 @@
     <select id="sortBy" bind:value={sortBy} class="bg-white text-darkblue px-1 py-1 hover:bg-darkblue hover:text-offwhite font-sans">
       <option value="paint_name">Paint Name</option>
       <option value="colour_category">Colour Category</option>
+      {#if !isPaintTypePage}
+        <option value="type">Paint Type</option>
+      {/if}
+      {#if !isCompanyPage}
+        <option value="company">Company</option>
+      {/if}
     </select>
   </div>
   <div class="flex flex-col items-center">
@@ -70,16 +81,16 @@
   </div>
 </div>
 
-<div class="grid grid-cols-1 grid-flow-row lg:grid-cols-3 gap-6 py-4 px-8 min-w-full">
+<div class="grid grid-cols-1 sm:grid-cols-2 grid-flow-row xl:grid-cols-3 gap-6 py-4 px-2 lg:px-8 min-w-full">
   {#each currentPagePaints as paint}
     <PaintCard paint={paint} />
   {/each}
 </div>
 
-<div class="flex justify-center mt-4 pb-4">
+<div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 xl:grid-cols-7 gap-2 mt-4 pb-4 max-w-xs md:max-w-md xl:max-w-lg">
   {#each Array(Math.ceil(filteredPaints.length / itemsPerPage)).fill(0) as _, i}
     <button
-      class="mx-2 px-4 py-2 rounded-md border border-darkblue hover:bg-darkblue hover:text-offwhite transition"
+      class="mx-2 px-4 py-2 rounded-md border border-darkblue hover:bg-darkblue hover:text-offwhite transition flex items-center justify-center"
       class:selected={currentPage === i + 1}
       on:click={() => goToPage(i + 1)}
     >

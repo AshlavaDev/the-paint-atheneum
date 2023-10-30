@@ -10,3 +10,4 @@ export const headingData = writable({
 // Variable stores for getting paints from database
 export const paintByRange = writable([]);
 export const paintByColour = writable([]);
+export const paintByType = writable([]);

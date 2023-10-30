@@ -31,7 +31,7 @@
   <ChooseRange brand={pageData.brand} ranges={pageData.ranges} />
   <div class="w-[80%]">
     {#if $paintByRange.length > 0}
-    <PaintList paints={$paintByRange} />
+    <PaintList paints={$paintByRange} isCompanyPage={true} />
   {:else}
     <RangeSelectText />
     {/if}
