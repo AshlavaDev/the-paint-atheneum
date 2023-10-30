@@ -3,12 +3,19 @@
   import type { PaintProps } from 'AntheneumTypes';
 	import PaintCard from "../cards/PaintCard.svelte";
 
-  //The paint array that is all paints of that brand and range
+  //The paint array that is all paints of that brand and range, is Svelte store set with radio buttons
   export let paints: Array<PaintProps>;
 
   //Pagination variables for max items on a page and the current page starting at one
   export let itemsPerPage: number = 15;
   export let currentPage: number = 1;
+
+  //Sorting variables initially set to 'paint_name'
+  export let sortBy: keyof PaintProps = 'paint_name';
+
+  //Sorting by metallic quality with initial to all paints
+  let metallicFilter: 'all' | 'metallic' | 'non-metallic' = 'all';
+  let filteredPaints: Array<PaintProps>;
 
   //Initialization of indexes for slicing the paints array
   let startIndex = (currentPage - 1) * itemsPerPage;
@@ -17,11 +24,17 @@
   //The paint array that will actually be rendered
   let currentPagePaints: Array<PaintProps> = [];
 
-  // Reactive bindings to help trigger rerenders when needed
+  // Reactive bindings to help trigger rerenders when needed, slices array based on what page you are on and which metallic options are selected
   $: {
+    filteredPaints = paints.filter(paint => {
+      if (metallicFilter === 'all') return true;
+      if (metallicFilter === 'metallic') return paint.is_metallic;
+      if (metallicFilter === 'non-metallic') return !paint.is_metallic;
+    }); 
+
     startIndex = (currentPage - 1) * itemsPerPage;
     endIndex = startIndex + itemsPerPage;
-    currentPagePaints = paints.slice(startIndex, endIndex);
+    currentPagePaints = filteredPaints.sort((a, b) => (a[sortBy] > b[sortBy] ? 1 : -1)).slice(startIndex, endIndex);
   }
 
   function goToPage(pageNumber: number) {
@@ -30,6 +43,33 @@
 
 </script>
 
+<div class="text-lg text-darkblue flex flex-col items-center gap-6">
+  <div>
+    <label for="sortBy">Sort by:</label>
+    <select id="sortBy" bind:value={sortBy} class="bg-white text-darkblue px-1 py-1 hover:bg-darkblue hover:text-offwhite font-sans">
+      <option value="paint_name">Paint Name</option>
+      <option value="colour_category">Colour Category</option>
+    </select>
+  </div>
+  <div class="flex flex-col items-center">
+    <label for="metallicFilter">Metallic Options</label>
+    <div id="metallicFilter" class="flex gap-4">
+      <div>
+        <input type="radio" id="all" name="metallicFilter" value="all" bind:group={metallicFilter}>
+        <label for="all">All Paints</label>
+      </div>
+      <div>
+        <input type="radio" id="non-metallic" name="metallicFilter" value="non-metallic" bind:group={metallicFilter}>
+        <label for="non-metallic">No Metallic Paints</label>
+      </div>
+      <div>
+        <input type="radio" id="metallic" name="metallicFilter" value="metallic" bind:group={metallicFilter}>
+        <label for="metallic">Only Metallic Paints</label>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="grid grid-cols-1 grid-flow-row lg:grid-cols-3 gap-6 py-4 px-8 min-w-full">
   {#each currentPagePaints as paint}
     <PaintCard paint={paint} />
@@ -37,7 +77,7 @@
 </div>
 
 <div class="flex justify-center mt-4 pb-4">
-  {#each Array(Math.ceil(paints.length / itemsPerPage)).fill(0) as _, i}
+  {#each Array(Math.ceil(filteredPaints.length / itemsPerPage)).fill(0) as _, i}
     <button
       class="mx-2 px-4 py-2 rounded-md border border-darkblue hover:bg-darkblue hover:text-offwhite transition"
       class:selected={currentPage === i + 1}
