@@ -1,11 +1,11 @@
 <script lang="ts">
+	//The Games Workshop/Citadel company range page
   import { onMount } from 'svelte';
 
 	import { headingData, paintByRange } from '$lib/store';
   import ChooseRange from '$lib/components/ui/lists/ChooseRange.svelte';
   import PaintList from '$lib/components/ui/lists/PaintList.svelte';
-
-  //TODO: Style and turn into a component the no paints found text
+	import RangeSelectText from '$lib/components/ui/messages/RangeSelectText.svelte';
 
 	const headingInfo = {
 		heading: 'Citadel - Games Workshop',
@@ -33,7 +33,7 @@
     {#if $paintByRange.length > 0}
     <PaintList paints={$paintByRange} />
   {:else}
-    <p class="text-center text-lg md:text-xl text-darkblue">Please select a range</p>
+    <RangeSelectText />
     {/if}
   </div>
 </section>
