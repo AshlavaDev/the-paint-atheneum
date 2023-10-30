@@ -2,11 +2,10 @@
   // A button that when pressed grabs the relevant paints from the database
   import { onMount } from "svelte";
 
-	import { paintByRange } from "$lib/store";
+	import { paintByColour } from "$lib/store";
 
-  // the button component for choosing a paint range
-  export let range: string;
-  export let brand: string;
+  // incoming colour selection
+  export let colour: string;
 
   // Variable and onMount to help ensure no radio button is checked on page refresh
   let radioButton: HTMLInputElement;
@@ -16,7 +15,7 @@
   });
 
   async function fetchPaints() {
-    const res = await fetch(`/api/get-range?brand=${brand}&range=${range}`, {
+    const res = await fetch(`/api/get-colour?colour=${colour.toLowerCase()}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -24,7 +23,8 @@
     });
 
     const data = await res.json();
-    paintByRange.set(data);
+    console.log(data);
+    paintByColour.set(data);
   }
 </script>
 
@@ -33,18 +33,18 @@
     bind:this={radioButton}
     type="radio"
     name="ColourOption"
-    value={range}
-    id={range}
+    value={colour}
+    id={colour}
     class="peer hidden"
     on:click="{fetchPaints}"
   />
 
   <label
-    for={range}
+    for={colour}
     class="flex cursor-pointer items-center justify-center rounded-md border border-darkblue py-2 px-3
       bg-darkblue text-offwhite 
       peer-checked:bg-offwhite peer-checked:text-darkblue"
     >
-      <p class="text-sm md:text-lg">{range}</p>
+      <p class="text-sm md:text-lg">{colour}</p>
     </label>
 </div>

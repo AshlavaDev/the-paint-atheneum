@@ -7,4 +7,6 @@ export const headingData = writable({
 	subHeading: 'Page Subheading'
 });
 
+// Variable stores for getting paints from database
 export const paintByRange = writable([]);
+export const paintByColour = writable([]);

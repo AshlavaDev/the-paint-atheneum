@@ -1,8 +1,5 @@
 <script lang="ts">
   // The is a ui list that renders all the ranges from a company as buttons
-  //TODO: Add sorting by color category or by name, restrict number of results per page
-
-
   import RangeChooseButton from '../buttons/RangeChooseButton.svelte';
 
   export let ranges: string[];
