@@ -1,10 +1,10 @@
 <script>
   import { headingData } from "$lib/store";
 	import { onMount } from "svelte";
-
+  
   const headingInfo = {
-		heading: "News",
-		subHeading: "Updates on the website",
+		heading: "Contact Us",
+		subHeading: "How to get in touch",
 	}
 
   onMount(() => {
