@@ -1,8 +1,10 @@
 //This file is for any stores needed throught the app
 
-import { writable } from "svelte/store";
+import { writable } from 'svelte/store';
 
 export const headingData = writable({
-  heading: "Page Heading",
-  subHeading: "Page Subheading"
+	heading: 'Page Heading',
+	subHeading: 'Page Subheading'
 });
+
+export const paintByRange = writable([]);

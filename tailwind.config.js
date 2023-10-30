@@ -17,10 +17,10 @@ export default {
 				serif: ['Playfair-Display', 'serif']
 			},
 			backgroundImage: {
-				'darkhero': "url('/assets/images/darker-background.jpg')",
-				'lighthero': "url('/assets/images/lighter-background.jpg')",
-				'waterhero': "url('/assets/images/watery-background.jpg')",
-				'multihero': "url('/assets/images/sampler-background.jpg')"
+				darkhero: "url('/assets/images/darker-background.jpg')",
+				lighthero: "url('/assets/images/lighter-background.jpg')",
+				waterhero: "url('/assets/images/watery-background.jpg')",
+				multihero: "url('/assets/images/sampler-background.jpg')"
 			}
 		}
 	},

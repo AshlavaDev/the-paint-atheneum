@@ -1,16 +1,15 @@
 <script lang="ts">
-	import { headingData } from "$lib/store";
-	import { onMount } from "svelte";
+	import { headingData } from '$lib/store';
+	import { onMount } from 'svelte';
 
 	const headingInfo = {
-		heading: "About",
-		subHeading: "The Mission of The Paint Atheneum",
-	}
+		heading: 'About',
+		subHeading: 'The Mission of The Paint Atheneum'
+	};
 
 	onMount(() => {
 		headingData.set(headingInfo);
-	})
-
+	});
 </script>
 
 <section class="flex-grow flex flex-col items-center gap-4 py-6 px-8">

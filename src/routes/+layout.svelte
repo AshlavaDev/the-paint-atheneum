@@ -1,4 +1,4 @@
-<script  lang="ts">
+<script lang="ts">
 	import { page } from '$app/stores';
 
 	import Footer from '$lib/components/navigation/Footer.svelte';
@@ -11,7 +11,6 @@
 	let pageHeading: typeof HomeHeading | typeof OtherHeading;
 
 	$: {
-
 		const path = $page.url.pathname;
 
 		if (path === '/') {
@@ -20,7 +19,6 @@
 			pageHeading = OtherHeading;
 		}
 	}
-
 </script>
 
 <div class="bg-offwhite">

@@ -1,13 +1,13 @@
 <script>
-  import { headingData } from "$lib/store";
-	import { onMount } from "svelte";
+	import { headingData } from '$lib/store';
+	import { onMount } from 'svelte';
 
-  const headingInfo = {
-		heading: "Paints by Colour",
-		subHeading: "Paints from all companies arranged by colour",
-	}
+	const headingInfo = {
+		heading: 'Paints by Colour',
+		subHeading: 'Paints from all companies arranged by colour'
+	};
 
-  onMount(() => {
-    headingData.set(headingInfo);
-  })
+	onMount(() => {
+		headingData.set(headingInfo);
+	});
 </script>
