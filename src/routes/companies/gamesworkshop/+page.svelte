@@ -33,7 +33,7 @@
     {#if $paintByRange.length > 0}
     <PaintList paints={$paintByRange} />
   {:else}
-    <p>No paints found.</p>
+    <p class="text-center text-lg md:text-xl text-darkblue">Please select a range</p>
     {/if}
   </div>
 </section>

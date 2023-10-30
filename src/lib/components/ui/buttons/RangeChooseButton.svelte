@@ -1,9 +1,18 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+
 	import { paintByRange } from "$lib/store";
 
   // the button component for choosing a paint range
   export let range: string;
   export let brand: string;
+
+  // Variable and onMount to help ensure no radio button is checked on page refresh
+  let radioButton: HTMLInputElement;
+
+  onMount(() => {
+    radioButton.checked = false;
+  });
 
   async function fetchPaints() {
     const res = await fetch(`api/get-range?brand=${brand}&range=${range}`, {
@@ -21,6 +30,7 @@
 
 <div>
   <input
+    bind:this={radioButton}
     type="radio"
     name="ColourOption"
     value={range}
