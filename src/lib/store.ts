@@ -7,6 +7,9 @@ export const headingData = writable({
 	subHeading: 'Page Subheading'
 });
 
+//This allows pages to be positioned properly on mobile in relation to top nav
+export const topValue = writable(0);
+
 // Variable stores for getting paints from database
 export const paintByRange = writable([]);
 export const paintByColour = writable([]);

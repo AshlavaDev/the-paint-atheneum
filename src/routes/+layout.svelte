@@ -6,6 +6,7 @@
 	import TopNav from '$lib/components/navigation/TopNav.svelte';
 	import HomeHeading from '$lib/components/pageheadings/HomeHeading.svelte';
 	import OtherHeading from '$lib/components/pageheadings/OtherHeading.svelte';
+	import { topValue } from '$lib/store';
 	import '../app.css';
 
 	let pageHeading: typeof HomeHeading | typeof OtherHeading;
@@ -23,7 +24,7 @@
 
 <div class="bg-offwhite">
 	<TopNav />
-	<main class="min-h-screen">
+	<main class="min-h-screen relative" style="top: {$topValue}px;">
 		<svelte:component this={pageHeading} />
 		<div class="flex">
 			<SideNav />
