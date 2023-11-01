@@ -1,6 +1,6 @@
 <script>
 	// This is a page for a list of all the companies, and the companies are in "static" pages in the directory to allow for easier get access from the database
-  import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
 	import { headingData } from '$lib/store';
 
@@ -12,9 +12,6 @@
 	onMount(() => {
 		headingData.set(headingInfo);
 	});
-
-  
-
 </script>
 
 <section class="flex-grow px-3">

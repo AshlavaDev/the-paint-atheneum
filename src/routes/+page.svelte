@@ -1,3 +1,5 @@
+<!-- TODO: App list: data caching, search functionality -->
+
 <section class="flex-grow flex flex-col items-center px-3">
 	<h2 class="font-serif text-3xl md:text-6xl text-darkblue text-center py-5">The Paint Library</h2>
 	<p class="font-sans text-lg md:text-xl text-darkblue text-center">

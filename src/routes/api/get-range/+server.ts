@@ -1,4 +1,4 @@
-//Api endpoint for getting particular ranges 
+//Api endpoint for getting particular ranges
 import supabase from '$lib/supabaseClient';
 import type { RequestHandler } from '@sveltejs/kit';
 
@@ -19,4 +19,3 @@ export const GET: RequestHandler = async (req) => {
 
 	return new Response(JSON.stringify(data));
 };
-

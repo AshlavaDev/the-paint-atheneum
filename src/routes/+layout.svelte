@@ -25,7 +25,7 @@
 	<TopNav />
 	<main class="min-h-screen">
 		<svelte:component this={pageHeading} />
-		<div class="flex justify-between">
+		<div class="flex">
 			<SideNav />
 			<slot />
 		</div>
