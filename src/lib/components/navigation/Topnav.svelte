@@ -13,9 +13,24 @@
 	let header: HTMLElement;
 
 	onMount(() => {
-		//If statement checks header for TypeScript allowance
-		if (header) {
-			topValue.set(header.offsetHeight);
+		const updateTopValue = () => {
+			//If statement checks header for TypeScript allowance
+			if (window.innerWidth > 1024) {
+				topValue.set(0);
+			} else {
+				if (header) {
+					topValue.set(header.offsetHeight);
+				}
+			};
+		};
+		
+		updateTopValue();
+
+		//Screen resize event with cleanup
+		window.addEventListener('resize', updateTopValue);
+
+		return () => {
+			window.removeEventListener('resize', updateTopValue);
 		}
 	});
 </script>
