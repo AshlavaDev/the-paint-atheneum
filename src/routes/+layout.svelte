@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
 
 	import Footer from '$lib/components/navigation/Footer.svelte';
 	import SideNav from '$lib/components/navigation/SideNav.svelte';
@@ -20,11 +21,12 @@
 			pageHeading = OtherHeading;
 		}
 	}
+
 </script>
 
-<div class="bg-offwhite">
+<div class="bg-offwhite flex flex-col min-h-screen">
 	<TopNav />
-	<main class="min-h-screen relative" style="top: {$topValue}px;">
+	<main class="relative flex-grow" style="top: {$topValue}px;">
 		<svelte:component this={pageHeading} />
 		<div class="flex">
 			<SideNav />

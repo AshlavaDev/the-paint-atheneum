@@ -40,7 +40,13 @@
 	class="flex items-center justify-around py-4 md:py-8 px-4 text-darkblue border-b-4 border-darkblue font-serif fixed top-0 w-full z-20 bg-offwhite lg:static"
 >
 	<a href="/" class="hidden xl:block font-display text-4xl">The Paint Atheneum</a>
-	<a href="/" class="xl:hidden text-2xl">The PA</a>
+	<a href="/" class="xl:hidden text-2xl flex items-center gap-2">
+		<span class="flex">
+			<Icon icon="material-symbols:book-5-outline" />
+			<Icon icon="mdi:paint-outline" />
+		</span>
+		The PA
+	</a>
 
 	<nav>
 		<div class="space-x-8 lg:flex hidden">

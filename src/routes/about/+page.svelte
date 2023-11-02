@@ -47,7 +47,7 @@
 			money. For now, here is my <a
 				href="https://ko-fi.com/ashleymorganwbdv"
 				target="_blank"
-				class="text-neogreen hover:text-golden">Kofi link</a
+				class="text-deepred hover:text-black">Kofi link</a
 			>.
 		</p>
 	</div>

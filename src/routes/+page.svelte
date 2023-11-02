@@ -6,7 +6,7 @@
 		Please feel free to look around. If you would like to support this site, please donate on this <a
 			href="https://ko-fi.com/ashleymorganwbdv"
 			target="_blank"
-			class="text-neogreen hover:text-golden">Kofi.</a
+			class="text-deepred hover:text-black">Kofi.</a
 		>
 	</p>
 	<h3 class="font-sans text-xl md:text-2xl text-darkblue text-center py-5 underline">

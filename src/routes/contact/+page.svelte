@@ -38,7 +38,7 @@
 					transition
 					ease-in-out
 					m-0
-					focus:text-gray-700 focus:bg-white focus:border-neogreen focus:outline-none"
+					focus:text-gray-700 focus:bg-white focus:border-deepred focus:outline-none"
 					name="name"
 					id="name"
 					placeholder="Name"
@@ -62,7 +62,7 @@
 					transition
 					ease-in-out
 					m-0
-					focus:text-darkblue focus:bg-white focus:border-neogreen focus:outline-none"
+					focus:text-darkblue focus:bg-white focus:border-deepred focus:outline-none"
 					name="message"
 					id="message"
 					rows="4"
@@ -83,7 +83,7 @@
 				uppercase
 				rounded
 				shadow-md
-				hover:bg-offwhite hover:shadow-lg hover:text-darkblue hover:border hover:border-darkblue focus:border focus:border-neogreen focus:text-darkblue
+				hover:bg-offwhite hover:shadow-lg hover:text-darkblue hover:border hover:border-darkblue focus:border focus:border-deepred focus:text-darkblue
 				focus:bg-offwhite focus:shadow-lg focus:outline-none focus:ring-0
 				active:bg-darkblue active:shadow-lg
 				transition

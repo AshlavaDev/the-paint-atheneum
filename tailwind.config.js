@@ -8,6 +8,7 @@ export default {
 			colors: {
 				darkblue: '#05386B',
 				offwhite: '#fed5b7',
+				deepred: '#850101',
 				golden: '#c6a53e',
 				neogreen: '#5cdb95'
 			},
