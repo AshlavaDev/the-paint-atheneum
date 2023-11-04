@@ -51,34 +51,34 @@
 	<nav>
 		<div class="space-x-8 lg:flex hidden">
 			<!-- Desktop Section -->
-			<a class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1" href="/">
+			<a class="top-nav-link" href="/">
 				Home
 			</a>
-			<a class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1" href="/about">
+			<a class="top-nav-link" href="/about">
 				About
 			</a>
 			<a
-				class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1"
+				class="top-nav-link"
 				href="/companies"
 			>
 				Companies
 			</a>
 			<a
-				class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1"
+				class="top-nav-link"
 				href="/paintcolours"
 			>
 				Colours
 			</a>
 			<a
-				class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1"
+				class="top-nav-link"
 				href="/painttypes"
 			>
 				Types
 			</a>
-			<a class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1" href="/news">
+			<a class="top-nav-link" href="/news">
 				News
 			</a>
-			<a class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1" href="/contact">
+			<a class="top-nav-link" href="/contact">
 				Contact
 			</a>
 		</div>
@@ -88,59 +88,59 @@
 	</button>
 </header>
 {#if isOpen}
-	<div
+	<nav
 		class="flex flex-col text-darkblue font-serif z-20 w-full fixed bg-offwhite border-b-2 border-darkblue"
 		style="top: {$topValue}px;"
 	>
 		<!-- Mobile Section -->
 		<a
-			class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1"
+			class="top-nav-link"
 			href="/"
 			on:click={() => (isOpen = false)}
 		>
 			Home
 		</a>
 		<a
-			class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1"
+			class="top-nav-link"
 			href="/about"
 			on:click={() => (isOpen = false)}
 		>
 			About
 		</a>
 		<a
-			class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1"
+			class="top-nav-link"
 			href="/companies"
 			on:click={() => (isOpen = false)}
 		>
 			Companies
 		</a>
 		<a
-			class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1"
+			class="top-nav-link"
 			href="/paintcolours"
 			on:click={() => (isOpen = false)}
 		>
 			Colours
 		</a>
 		<a
-			class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1"
+			class="top-nav-link"
 			href="/painttypes"
 			on:click={() => (isOpen = false)}
 		>
 			Types
 		</a>
 		<a
-			class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1"
+			class="top-nav-link"
 			href="/news"
 			on:click={() => (isOpen = false)}
 		>
 			News
 		</a>
 		<a
-			class="hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1"
+			class="top-nav-link"
 			href="/contact"
 			on:click={() => (isOpen = false)}
 		>
 			Contact
 		</a>
-	</div>
+	</nav>
 {/if}

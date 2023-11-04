@@ -16,3 +16,9 @@
 	font-family: 'Playfair-Display';
 	src: url('/assets/fonts/PlayfairDisplaySC-Regular.ttf');
 }
+
+@layer components {
+	.top-nav-link {
+		@apply hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1;
+	}
+}
