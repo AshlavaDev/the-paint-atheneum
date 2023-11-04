@@ -1,5 +1,5 @@
 <script>
-	//FIXME: Paint dropdown section styles + readd down arrow icon
+	//FIXME: Paint dropdown section styles + add down arrow icon
 	//TODO: Open and close icon for whole menu
 </script>
 
@@ -8,9 +8,9 @@
 		<span class="block w-32 h-10 rounded-lg" />
 		<h4 class="text-lg md:text-xl">Menu</h4>
 		<nav class="flex flex-col mt-6 space-y-1">
-			<a href="/" class="ml-2 pl-1 text-sm md:text-lg hover:bg-darkblue hover:text-offwhite">Home</a
+			<a href="/" class="side-nav-link">Home</a
 			>
-			<a href="/about" class="ml-2 pl-1 text-sm md:text-lg hover:bg-darkblue hover:text-offwhite"
+			<a href="/about" class="side-nav-link"
 				>About</a
 			>
 			<details class="group [&_summary::-webkit-details-marker]:hidden">
@@ -34,10 +34,10 @@
 					</li>
 				</ul>
 			</details>
-			<a href="/news" class="ml-2 pl-1 text-sm md:text-lg hover:bg-darkblue hover:text-offwhite"
+			<a href="/news" class="side-nav-link"
 				>News</a
 			>
-			<a href="/contact" class="ml-2 pl-1 text-sm md:text-lg hover:bg-darkblue hover:text-offwhite"
+			<a href="/contact" class="side-nav-link"
 				>Contact</a
 			>
 		</nav>

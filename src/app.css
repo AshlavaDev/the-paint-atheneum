@@ -21,4 +21,8 @@
 	.top-nav-link {
 		@apply hover:bg-darkblue hover:text-offwhite transition text-xl px-2 py-1;
 	}
+
+	.side-nav-link {
+		@apply ml-2 pl-1 text-sm md:text-lg hover:bg-darkblue hover:text-offwhite;
+	}
 }
