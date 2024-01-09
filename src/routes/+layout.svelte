@@ -1,8 +1,9 @@
 <script lang="ts">
+	//TODO: Add sidenav back in once fix for hosting build is found
 	import { page } from '$app/stores';
 
 	import Footer from '$lib/components/navigation/Footer.svelte';
-	import SideNav from '$lib/components/navigation/SideNav.svelte';
+	//import SideNav from '$lib/components/navigation/SideNav.svelte';
 	import TopNav from '$lib/components/navigation/TopNav.svelte';
 	import HomeHeading from '$lib/components/pageheadings/HomeHeading.svelte';
 	import OtherHeading from '$lib/components/pageheadings/OtherHeading.svelte';
@@ -28,7 +29,7 @@
 	<main class="relative flex-grow" style="top: {$topValue}px;">
 		<svelte:component this={pageHeading} />
 		<div class="flex">
-			<SideNav /> 
+			<!-- SideNav /> -->
 			<slot />
 		</div>
 	</main>
