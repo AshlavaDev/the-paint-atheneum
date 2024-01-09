@@ -1,7 +1,6 @@
 <script>
 	//FIXME: Paint dropdown section styles + add down arrow icon
 	//TODO: Open and close icon for whole menu
-	//TODO: Add back in
 </script>
 
 <div class="max-w-1/5 h-screen sticky top-0 border-r-4 border-darkblue hidden md:block">
