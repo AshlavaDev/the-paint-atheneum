@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 
 	import Footer from '$lib/components/navigation/Footer.svelte';
-	import SideNav from '../lib/components/navigation/SideNav.svelte';
+	import SideNav from '$lib/components/navigation/SideNav.svelte';
 	import TopNav from '$lib/components/navigation/TopNav.svelte';
 	import HomeHeading from '$lib/components/pageheadings/HomeHeading.svelte';
 	import OtherHeading from '$lib/components/pageheadings/OtherHeading.svelte';
