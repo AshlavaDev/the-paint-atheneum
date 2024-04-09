@@ -28,7 +28,7 @@
 	<main class="relative flex-grow" style="top: {$topValue}px;">
 		<svelte:component this={pageHeading} />
 		<div class="flex">
-			SideNav />
+			<SideNav />
 			<slot />
 		</div>
 	</main>
