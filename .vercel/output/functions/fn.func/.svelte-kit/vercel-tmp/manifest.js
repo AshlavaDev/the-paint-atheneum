@@ -10,7 +10,7 @@ return {
 	assets: new Set(["assets/fonts/Forum-Regular.ttf","assets/fonts/NotoSansJP-Bold.otf","assets/fonts/NotoSansJP-Regular.otf","assets/fonts/PlayfairDisplaySC-Bold.ttf","assets/fonts/PlayfairDisplaySC-Regular.ttf","assets/images/darker-background.jpg","assets/images/lighter-background.jpg","assets/images/sampler-background.jpg","assets/images/watery-background.jpg","assets/logos/gwlogo.png","assets/logos/logovallejo.jpg","favicon.png"]),
 	mimeTypes: {".ttf":"font/ttf",".otf":"font/otf",".jpg":"image/jpeg",".png":"image/png"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.ClpP1Ao5.js","app":"_app/immutable/entry/app.DI4S4tVd.js","imports":["_app/immutable/entry/start.ClpP1Ao5.js","_app/immutable/chunks/entry.CdjWJn6z.js","_app/immutable/chunks/scheduler.DQzrkqyK.js","_app/immutable/chunks/index.D2W-D5RK.js","_app/immutable/entry/app.DI4S4tVd.js","_app/immutable/chunks/scheduler.DQzrkqyK.js","_app/immutable/chunks/index.BpbkGuoE.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.D3GW3OBF.js","app":"_app/immutable/entry/app.BBtt4MWt.js","imports":["_app/immutable/entry/start.D3GW3OBF.js","_app/immutable/chunks/entry.D--Gd_Nw.js","_app/immutable/chunks/scheduler.DQzrkqyK.js","_app/immutable/chunks/index.D2W-D5RK.js","_app/immutable/entry/app.BBtt4MWt.js","_app/immutable/chunks/scheduler.DQzrkqyK.js","_app/immutable/chunks/index.BpbkGuoE.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('../output/server/nodes/0.js')),
 			__memo(() => import('../output/server/nodes/1.js')),
